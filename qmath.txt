@@ -1,0 +1,19 @@
+// Use QMath object functions useful in quantum algorithms.
+
+// Calculates the greatest common divisor.
+Print QMath.gcd(10, 25)
+
+// Returns integer power a^b.
+Print QMath.ipow(2, 10)
+
+// Calculates the number of bits required to store a value.
+Print QMath.getWidth(15)
+
+// Calculates fractional approximation of a decimal value.
+Print QMath.fracApprox(30, 10, 8)
+
+// Calculates the inverse modulus of N and C.
+Print QMath.inverseMod(11, 5)
+
+// Calculates x^k mod N.
+Print QMath.expModN(5, 3, 15)

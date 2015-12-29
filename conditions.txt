@@ -1,0 +1,29 @@
+//if else boolean
+j = true
+
+if j==true
+  Print "true"
+else
+	Print "false"
+endif
+  
+//if else int
+j = 1903
+
+if j==1903
+  Print "bjk"
+if j>1903
+	Print "renkli"  
+endif
+  
+
+//if else string
+j = "bjk"
+
+if j=="bjk"
+  Print "1903"
+else
+	Print "2015"  
+endif
+  
+

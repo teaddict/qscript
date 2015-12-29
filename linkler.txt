@@ -1,0 +1,4 @@
+Hadamard
+https://github.com/gwroblew/Quantum-Computing-Playground/blob/c91de9d7e17b9991d0b455ff5186c049563b13c4/js/simulator.js
+
+

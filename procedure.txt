@@ -1,0 +1,23 @@
+// Procedure.
+proc MyProcedure x, y
+	// Procedures can be nested.
+  proc NestedProcedure z
+    if z == "Value: 2"
+			// Variables starting with underscore have global scope.
+      _return_value = "quantum"
+      return
+    endif
+    _return_value = z + "."
+  endproc
+  // Variables have scope local to the procedure.
+  for i = x; i < y; i++
+  	NestedProcedure _s + i
+    Print _return_value
+  endfor
+endproc
+
+_return_value = ""
+_s = "Value: "
+
+MyProcedure 0, 5
+Print _return_value

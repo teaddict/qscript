@@ -1,0 +1,15 @@
+//varibles 
+j = 5
+Print j
+
+j = "test"
+Print j
+
+j = true
+Print j
+
+// Variables starting with underscore have global scope.
+_return_value = ""
+
+// Variables have scope local to the procedure.
+

@@ -1,0 +1,15 @@
+// For loop.
+j = 2
+for i = 0; i < 10; i++
+  if i == 3
+    Print "i: " + i
+    continue
+  endif
+  if i == 5
+    Print "i: " + i
+    break
+  endif
+  Print j * i
+endfor
+
+
