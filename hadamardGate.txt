@@ -1,0 +1,19 @@
+// This example demonstrates properties of Hadamard gate.
+//
+VectorSize 8
+
+Delay 500
+
+for i = 0; i < 8; i++
+	Display "Creating superposition of all states, bit " + i
+  Hadamard i
+endfor
+
+Delay 2000
+Delay 500
+
+for i = 0; i < 8; i++
+	Display "Applying Hadamard gates in the same order, bit " + i
+  Hadamard i
+endfor
+
