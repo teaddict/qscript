@@ -1,0 +1,64 @@
+// This example demonstrates built-in commands.
+VectorSize 8
+// 8tane qubit ekle
+
+
+SigmaY 2
+SigmaX 3
+SigmaZ 4
+
+/*Sigma X, also known as Pauli X gate, is a quantum equivalent of bit negation. Since qubits are represented by complex numbers, there is no simple concept of negation for them. Sigma Y and Sigma Z gates "negate" qubits in alternative ways.
+*/
+
+//0. dan 8. qubite kadar qft yapıyor
+QFT 0, 8
+
+
+
+// 0 - 2D, 1 - 2D+Phase, 2 - 3D görüntü veriyor
+SetViewMode 0
+SetViewMode 1
+SetViewMode 2
+
+
+CNot 0, 1
+/*
+CNot	Controlled NOT gate applies the same transformation as Sigma X gate, except that its execution is conditioned on the value of the first argument - control qubit. The quantum negation is only performed on states where the control qubit has value 1. States where control qubit has value 0 remain unchanged.
+*/
+/*
+ilk değer control qubit = 0, statelere bakar ve control qubiti = 1 olanda negation yapar eğer control qubit = 0 ise bi işlem yapmaz
+*/
+
+Toffoli 1, 2, 3
+/*
+Toffoli	Toffoli gate operates in the same way as controlled NOT gate, taking two control qubits and the target qubit. Negation is only performed on states where both control qubits have value 1.
+*/
+/* 1 ve 2 nci bitlerimiz control qubit , eğer bu qubitlerin değeri 1 se gidip target 3.bit negation yapar */
+
+
+
+// ExpModN gate, calculates x^k mod N.
+// First parameter is the x value, second is the N value,
+// third is the width of the first register (k).
+// Assumes that second register is initialized to 0.
+ExpModN 7, 15, 4
+// (7^15) mod 4
+// RevExpModN gate, calculates k^x mod N.
+// First parameter is the x value, second is the N value,
+// third is the width of the first register (k).
+// Assumes that second register is initialized to 0.
+RevExpModN 7, 15, 4
+// (15^7) mod 4
+
+// Apply decoherence (random phase shifts to qbit states).
+// Parameter controls strength (reasonable range: 0.1 - 1).
+Decoherence 0.3
+//simulated annealingdeki gibi
+
+// Shifting gates.
+ShiftLeft 2		//2 bit sola shift
+ShiftRight 1	//1 bit sağa shift
+
+
+
+
