@@ -1,0 +1,15 @@
+//quantum farklı değerleri vermesi
+//burda hadamard uyguluyoruz 2. qubit e
+//MeasureBit 2 ile değerini görmek istiyoruz
+//bazen 1 bazen 0 geliyor
+//işte bu kuantum kararsızlığıdır
+
+// This example demonstrates built-in quantum gates.
+//
+VectorSize 8
+
+// Hadamard gate.
+Hadamard 2
+
+MeasureBit 2
+Print measured_value

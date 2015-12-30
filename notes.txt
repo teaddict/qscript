@@ -1,3 +1,6 @@
+ ***The programming model does not allow the programmer to directly set the value of these qubits. 
+
+
 // This example demonstrates built-in commands.
 VectorSize 8
 // 8tane qubit ekle
